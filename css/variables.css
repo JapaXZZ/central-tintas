@@ -1,0 +1,52 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-background: #f8f9fa;
+  --color-primary: #003b73; /* Azul Institucional Elegante */
+  --color-primary-dark: #002244;
+  --color-primary-light: #00509e;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-border: #e0e0e0;
+  
+  /* Accent Colors */
+  --color-accent-yellow: #f1c40f;
+  --color-accent-green: #27ae60;
+  --color-accent-red: #e74c3c;
+  --color-accent-pink: #e84393;
+
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  --font-tertiary: 'Manrope', sans-serif;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 16px 32px rgba(0, 0, 0, 0.15);
+  
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 100px;
+}
+
+/* Dark mode / prefers-color-scheme - can be extended later if needed, but keeping it white/clean as requested */
