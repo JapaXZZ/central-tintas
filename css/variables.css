@@ -46,7 +46,7 @@
   
   /* Layout */
   --container-width: 1200px;
-  --header-height: 100px;
+  --header-height: 80px;
 }
 
 /* Dark mode / prefers-color-scheme - can be extended later if needed, but keeping it white/clean as requested */
