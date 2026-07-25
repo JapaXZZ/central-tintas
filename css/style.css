@@ -169,6 +169,13 @@ ul {
   transform-origin: bottom left;
 }
 
+/* Esconde em celulares */
+@media (max-width: 768px) {
+    .paint-splash-container {
+        display: none !important;
+    }
+}
+
 .splash-blob {
   position: absolute;
   background-color: var(--color-primary);
