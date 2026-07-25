@@ -154,3 +154,51 @@ ul {
   white-space: nowrap;
   border: 0;
 }
+
+/* Paint Splash Corner Effect */
+.paint-splash-container {
+  position: fixed;
+  bottom: -20px;
+  left: -20px;
+  width: 250px;
+  height: 250px;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.85;
+  animation: splash-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform-origin: bottom left;
+}
+
+.splash-blob {
+  position: absolute;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transform-origin: center;
+}
+
+.main-blob {
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+  animation: splash-pulse 5s infinite alternate ease-in-out;
+  box-shadow: inset -10px -10px 20px rgba(0,0,0,0.1);
+}
+
+.drop-1 { width: 15px; height: 25px; bottom: 130px; left: 110px; transform: rotate(45deg); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+.drop-2 { width: 12px; height: 12px; bottom: 160px; left: 80px; }
+.drop-3 { width: 8px; height: 8px; bottom: 180px; left: 40px; }
+.drop-4 { width: 20px; height: 35px; bottom: 70px; left: 150px; transform: rotate(70deg); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; }
+.drop-5 { width: 10px; height: 10px; bottom: 40px; left: 190px; }
+.drop-6 { width: 18px; height: 18px; bottom: 100px; left: 170px; }
+
+@keyframes splash-pulse {
+  0% { transform: scale(1) rotate(0deg); border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+  100% { transform: scale(1.05) rotate(-5deg); border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%; }
+}
+
+@keyframes splash-in {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 0.85; }
+}
