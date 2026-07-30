@@ -88,7 +88,7 @@
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
-  background-image: url('../assets/images/732020313_18573732250064479_2302838880895085247_n.jpg');
+  background-image: url('../assets/images/obrafinalizada.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -571,7 +571,7 @@
 .footer-bottom {
   text-align: center;
   padding: var(--spacing-md) 0;
-  border-top: 1px solid rgba(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
   font-size: 0.875rem;
 }
 
