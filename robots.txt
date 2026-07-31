@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.centraltintas.com.br/sitemap.xml
+Sitemap: https://www.centraltintasvenceslauense.com.br/sitemap.xml
