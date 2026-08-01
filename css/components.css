@@ -666,3 +666,498 @@
   .footer-top { grid-template-columns: 1fr; }
   .services-list { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Catálogo de Cores
+   ========================================================================== */
+
+/* Hero */
+.colors-hero {
+  padding: calc(var(--header-height) + var(--spacing-xl)) 0 var(--spacing-lg);
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.colors-hero-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.colors-hero .hero-badge {
+  margin-bottom: var(--spacing-sm);
+}
+
+.colors-hero-title {
+  font-size: 2.75rem;
+  line-height: 1.15;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.colors-hero-description {
+  font-size: 1.125rem;
+  color: var(--color-text-light);
+}
+
+/* Toolbar: busca + abas de família */
+.colors-filter-section {
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.colors-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.colors-search {
+  position: relative;
+  max-width: 420px;
+}
+
+.colors-search svg {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: var(--color-text-light);
+  pointer-events: none;
+}
+
+.colors-search input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-primary);
+  font-size: 0.9375rem;
+  background-color: var(--color-white);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.colors-search input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 59, 115, 0.12);
+}
+
+.colors-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.color-tab {
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.color-tab:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.color-tab.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.color-tab:focus-visible,
+.colors-search input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.colors-count {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Grid de cores */
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.color-card {
+  border: none;
+  padding: 0;
+  text-align: left;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  font-family: var(--font-primary);
+}
+
+.color-card:hover,
+.color-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  outline: none;
+}
+
+.color-swatch {
+  height: 110px;
+  width: 100%;
+  position: relative;
+}
+
+.color-swatch::after {
+  content: 'Pedir orçamento →';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.color-card:hover .color-swatch::after,
+.color-card:focus-visible .color-swatch::after {
+  opacity: 1;
+}
+
+.color-info {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.color-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.15rem;
+}
+
+.color-hex {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.colors-empty {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+  color: var(--color-text-light);
+}
+
+/* Aviso de fidelidade de cor */
+.colors-note-section {
+  padding: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.colors-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-background);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.colors-note-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colors-note p {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 0;
+}
+
+/* Responsivo */
+@media (max-width: 576px) {
+  .colors-hero-title { font-size: 2.1rem; }
+  .colors-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .color-swatch { height: 90px; }
+}
+
+/* ==========================================================================
+   Catálogo de Produtos (PDFs)
+   Conceito: cada card é uma "amostra de tinta" — faixa colorida no topo
+   (uma cor por produto, como uma cartela real), furo de amostra, borda
+   inferior com efeito de gotas escorrendo, e corpo branco com CTA circular.
+   Reaproveita as variáveis definidas em variables.css
+   ========================================================================== */
+
+/* Banner do topo da página */
+.catalog-banner {
+  padding-top: calc(var(--header-height) + var(--spacing-xl));
+  padding-bottom: var(--spacing-lg);
+  background-color: var(--color-background);
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.catalog-banner .hero-badge {
+  margin-bottom: var(--spacing-sm);
+}
+
+.catalog-banner-title {
+  font-size: 2.75rem;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.catalog-banner-subtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+  font-size: 1.0625rem;
+}
+
+/* Grid de cards */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg) var(--spacing-md);
+}
+
+/* ==========================================================================
+   Card = amostra de tinta
+   ========================================================================== */
+
+.catalog-card {
+  --swatch: var(--color-primary);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.catalog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.catalog-card:focus-visible {
+  outline: 2px solid var(--swatch);
+  outline-offset: 3px;
+}
+
+/* Faixa colorida superior (a "tinta") */
+.catalog-swatch {
+  position: relative;
+  height: 152px;
+  padding: 1rem 1.25rem 0;
+  background-color: var(--swatch);
+  background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.16), rgba(0, 0, 0, 0.12));
+  overflow: hidden;
+  transition: filter var(--transition-normal);
+  /* Borda inferior em "gotas escorrendo" */
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% 86%,
+    93% 86%, 91% 100%, 87% 86%,
+    77% 86%, 75% 95%, 71% 86%,
+    61% 86%, 59% 100%, 55% 86%,
+    45% 86%, 43% 93%, 39% 86%,
+    29% 86%, 27% 100%, 23% 86%,
+    13% 86%, 11% 94%, 7% 86%,
+    0% 86%
+  );
+}
+
+.catalog-card:hover .catalog-swatch {
+  filter: brightness(1.08);
+}
+
+/* Furo de amostra (estilo cartela de cores) */
+.catalog-swatch::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+/* Ícone de gota gigante, esmaecido, ao fundo da faixa */
+.catalog-drop {
+  position: absolute;
+  bottom: -6px;
+  right: -10px;
+  width: 108px;
+  height: 108px;
+  color: var(--color-white);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+/* Selo "PDF" no canto */
+.catalog-format {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(2px);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Etiqueta de categoria, ancorada na base da faixa */
+.catalog-category {
+  position: absolute;
+  bottom: 22px;
+  left: 16px;
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  background: var(--color-white);
+  color: var(--swatch);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Corpo branco do card */
+.catalog-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+}
+
+.catalog-card h3 {
+  font-size: 1.0625rem;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.32;
+}
+
+.catalog-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+/* Rodapé do card: tipo de arquivo + botão circular */
+.catalog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px dashed var(--color-border);
+}
+
+.catalog-filetype {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+.catalog-filetype svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.catalog-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--swatch);
+  white-space: nowrap;
+}
+
+.catalog-cta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--swatch);
+  color: var(--color-white);
+  transition: transform var(--transition-normal), background-color var(--transition-normal);
+}
+
+.catalog-cta-icon svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-normal);
+}
+
+.catalog-card:hover .catalog-cta-icon {
+  transform: scale(1.08);
+}
+
+.catalog-card:hover .catalog-cta-icon svg {
+  transform: translateX(2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .catalog-banner-title {
+    font-size: 2rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-swatch {
+    height: 132px;
+  }
+}
