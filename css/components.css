@@ -1161,3 +1161,30 @@
     height: 132px;
   }
 }
+
+.site-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 20px 0;
+    font-size: 16px;
+    color: #777;
+}
+
+.site-credit a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+}
+
+.site-credit img {
+    display: block;
+    width: auto;
+    height: 22px;
+    max-width: 150px;
+}
+
+.site-credit a:hover {
+    opacity: 0.8;
+}
